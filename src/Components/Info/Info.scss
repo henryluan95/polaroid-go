@@ -1,0 +1,74 @@
+@use "../../Styles/mixins" as *;
+
+.info {
+  @include flex-layout(column, flex-start, flex-start);
+  padding: 1rem;
+  background: black;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 5rem;
+  }
+
+  @include desktop {
+    height: 100vh;
+    @include flex-layout(row, space-between, flex-start);
+  }
+
+  &__left {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    flex: 1;
+  }
+
+  &__text {
+    @include flex-layout(column, center, center);
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translate(80%, -80%);
+    font-size: 5rem;
+    color: white;
+  }
+
+  &__circle {
+    animation: rotating 20s linear infinite;
+    width: 40rem;
+    margin-left: -14rem;
+  }
+
+  &__right {
+    @include flex-layout(column, flex-start, flex-start);
+    flex: 1;
+    color: white;
+    margin-left: auto;
+
+    @include desktop {
+      margin-top: -4rem;
+    }
+  }
+
+  &__description {
+    max-width: 20rem;
+    margin-top: 2rem;
+
+    @include desktop {
+      margin-top: -4rem;
+      margin: 1rem 0 0 20rem;
+    }
+
+    &--heading {
+      font-size: 2rem;
+    }
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
