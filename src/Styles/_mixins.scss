@@ -1,0 +1,22 @@
+//Breakpoints
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+@mixin flex-layout($direction, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
