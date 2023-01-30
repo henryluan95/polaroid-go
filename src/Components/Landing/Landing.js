@@ -37,7 +37,6 @@ const Landing = () => {
         start: "top start",
         end: `50% start`,
         scrub: true,
-        markers: true,
       },
     });
   });

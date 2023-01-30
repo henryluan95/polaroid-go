@@ -15,7 +15,6 @@ const Info = () => {
         start: `-${ViewHeight} start`,
         end: `-${ViewHeight / 2} start`,
         scrub: true,
-        markers: true,
       },
     });
   });

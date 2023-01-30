@@ -1,0 +1,67 @@
+@use "../../Styles/mixins" as *;
+
+.films {
+  padding: 3rem 1rem;
+  @include flex-layout(column, center, center);
+  overflow: hidden;
+
+  @include desktop {
+    padding: 0rem 5rem;
+  }
+
+  &__image {
+    width: 80%;
+    @include desktop {
+      width: 100%;
+      flex: 1;
+    }
+
+    &-container {
+      @include desktop {
+        flex: 1 1 0;
+      }
+    }
+  }
+
+  &__info {
+    &--first,
+    &--second {
+      text-align: center;
+      margin: 2rem 0;
+      // padding: 0 10rem;
+      flex: 1 1 0;
+    }
+
+    @include desktop {
+      margin-left: 8rem;
+    }
+
+    &-heading {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+
+      @include desktop {
+        padding: 0 10rem;
+        margin: 0 0 0 2rem;
+      }
+    }
+
+    &-description {
+      @include desktop {
+        padding: 0 8rem;
+        margin: 0 0 0 2rem;
+      }
+    }
+  }
+
+  &__first,
+  &__second {
+    @include flex-layout(column, center, center);
+    width: 100%;
+
+    @include desktop {
+      @include flex-layout(row, space-between, flex-start);
+      height: 200vh;
+    }
+  }
+}
