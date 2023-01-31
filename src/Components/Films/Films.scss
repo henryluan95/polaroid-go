@@ -17,6 +17,8 @@
     }
 
     &-container {
+      text-align: center;
+
       @include desktop {
         flex: 1 1 0;
       }
@@ -28,7 +30,6 @@
     &--second {
       text-align: center;
       margin: 2rem 0;
-      // padding: 0 10rem;
       flex: 1 1 0;
     }
 
@@ -60,8 +61,17 @@
     width: 100%;
 
     @include desktop {
-      @include flex-layout(row, space-between, flex-start);
-      height: 200vh;
+      @include flex-layout(row, space-between, center);
+      height: 100vh;
+    }
+  }
+
+  &__spacer {
+    display: none;
+
+    @include desktop {
+      height: 100vh;
+      display: block;
     }
   }
 }

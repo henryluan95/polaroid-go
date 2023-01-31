@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import "./Films.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Films = () => {
+  useLayoutEffect(() => {
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1280px)", () => {
+      gsap.from(".films__info--first", {
+        xPercent: 100,
+        scrollTrigger: {
+          trigger: ".films__first",
+          pin: true,
+          scrub: true,
+        },
+      });
+
+      gsap.from(".films__info--second", {
+        xPercent: 100,
+        scrollTrigger: {
+          trigger: ".films__second",
+          pin: true,
+          scrub: true,
+        },
+      });
+    });
+  });
+
+  const onLoad = () => {
+    ScrollTrigger.refresh();
+  };
+
   return (
     <div className="films">
       <div className="films__first">
@@ -13,6 +41,7 @@ const Films = () => {
             src="https://cdn.sanity.io/images/66aqnbcn/production/b1e1b6c6d191facd9cafb6fc4a4a68b0650efd26-1560x1040.jpg?w=2048&q=75&fit=clip&auto=format"
             alt="A girl holding two films"
             className="films__image"
+            onLoad={onLoad}
           />
         </div>
         <div className="films__info--first">
@@ -23,12 +52,14 @@ const Films = () => {
           </p>
         </div>
       </div>
+      <div className="films__spacer"></div>
       <div className="films__second">
         <div className="films__image-container">
           <img
             src="https://cdn.sanity.io/images/66aqnbcn/production/99e036bbb3d6d35838eec66d2b50aaaf0810df30-1560x1040.jpg?w=2048&q=75&fit=clip&auto=format"
             alt="Two films of a guy on a background"
             className="films__image"
+            onLoad={onLoad}
           />
         </div>
         <div className="films__info--second">
@@ -39,6 +70,7 @@ const Films = () => {
           </p>
         </div>
       </div>
+      <div className="films__spacer"></div>
     </div>
   );
 };
