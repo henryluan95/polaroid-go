@@ -41,6 +41,17 @@ const About = () => {
         yPercent: 100,
         ease: Power4.easeOut,
       });
+
+    gsap.to(".about", {
+      backgroundColor: "#ff0000",
+      scrollTrigger: {
+        trigger: ".about",
+        start: `bottom bottom`,
+        end: `150% bottom`,
+        scrub: true,
+        markers: true,
+      },
+    });
   });
 
   return (

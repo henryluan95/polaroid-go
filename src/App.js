@@ -4,6 +4,7 @@ import Landing from "./Components/Landing/Landing";
 import Video from "./Components/Video/Video";
 import Films from "./Components/Films/Films";
 import About from "./Components/About/About";
+import Purchase from "./Components/Purchase/Purchase";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Video />
       <Films />
       <About />
+      <Purchase />
     </>
   );
 }
