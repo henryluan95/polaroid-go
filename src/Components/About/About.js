@@ -21,7 +21,7 @@ const About = () => {
         scrollTrigger: {
           trigger: ".about",
           start: "20% 80%",
-          end: "40% 50%",
+          end: "40% 20%%",
           scrub: true,
         },
       })
@@ -42,15 +42,18 @@ const About = () => {
         ease: Power4.easeOut,
       });
 
-    gsap.to(".about", {
-      backgroundColor: "#ff0000",
-      scrollTrigger: {
-        trigger: ".about",
-        start: `bottom bottom`,
-        end: `150% bottom`,
-        scrub: true,
-        markers: true,
-      },
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1280px)", () => {
+      gsap.to(".about", {
+        backgroundColor: "black",
+        scrollTrigger: {
+          trigger: ".about",
+          start: `bottom bottom`,
+          end: `150% bottom`,
+          scrub: true,
+        },
+      });
     });
   });
 

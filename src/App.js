@@ -7,6 +7,10 @@ import About from "./Components/About/About";
 import Purchase from "./Components/Purchase/Purchase";
 
 export default function App() {
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <Landing />

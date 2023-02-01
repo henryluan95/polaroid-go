@@ -1,3 +1,42 @@
+@use "../../Styles/mixins" as *;
+
 .purchase {
-  height: 100vh;
+  @include flex-layout(row, center, center);
+  padding: 1rem;
+
+  @include desktop {
+    height: 100vh;
+  }
+
+  &__container {
+    @include flex-layout(row, center, center);
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 80%;
+  }
+
+  &__link {
+    position: relative;
+
+    &:hover {
+      .purchase__image--hover {
+        opacity: 1;
+        transition: 1s;
+      }
+    }
+  }
+
+  &__image {
+    width: 20rem;
+    background-color: white;
+    border-radius: 2rem;
+
+    &--hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: 1s;
+    }
+  }
 }
