@@ -20,7 +20,7 @@ const Info = () => {
   });
 
   return (
-    <div className="info">
+    <section className="info">
       <div className="info__left">
         <p className="info__text">
           <span>STAY</span> <span>INSTANT</span>
@@ -44,7 +44,7 @@ const Info = () => {
           Only compatible with the Polaroid Go film.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

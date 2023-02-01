@@ -34,7 +34,7 @@ const Films = () => {
   };
 
   return (
-    <div className="films">
+    <section className="films">
       <div className="films__first">
         <div className="films__image-container">
           <img
@@ -71,7 +71,7 @@ const Films = () => {
         </div>
       </div>
       <div className="films__spacer"></div>
-    </div>
+    </section>
   );
 };
 

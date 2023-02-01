@@ -1,0 +1,35 @@
+@use "../../Styles/mixins" as *;
+
+.about {
+  height: 100vh;
+  @include flex-layout(row, center, center);
+  padding: 0 1rem;
+
+  @include desktop {
+    padding: 0;
+  }
+
+  &__text {
+    max-width: 96vw;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 8rem;
+
+    @include desktop {
+      font-size: 10rem;
+    }
+
+    &--first,
+    &--fourth {
+      text-align: center;
+    }
+
+    &--third {
+      text-align: right;
+    }
+  }
+}
+
+span {
+  display: block;
+}
