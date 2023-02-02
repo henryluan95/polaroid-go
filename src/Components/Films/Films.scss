@@ -13,7 +13,6 @@
     width: 80%;
     @include desktop {
       width: 100%;
-      flex: 1;
     }
 
     &-container {
@@ -30,7 +29,7 @@
     &--second {
       text-align: center;
       margin: 2rem 0;
-      flex: 1 1 0;
+      flex: 1 1;
     }
 
     @include desktop {

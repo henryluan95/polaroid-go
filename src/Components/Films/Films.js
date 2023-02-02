@@ -1,4 +1,6 @@
 import React, { useLayoutEffect } from "react";
+import Film1 from "../../Assets/film1.png";
+import Film2 from "../../Assets/film2.jpg";
 import "./Films.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -38,7 +40,7 @@ const Films = () => {
       <div className="films__first">
         <div className="films__image-container">
           <img
-            src="https://cdn.sanity.io/images/66aqnbcn/production/b1e1b6c6d191facd9cafb6fc4a4a68b0650efd26-1560x1040.jpg?w=2048&q=75&fit=clip&auto=format"
+            src={Film1}
             alt="A girl holding two films"
             className="films__image"
             onLoad={onLoad}
@@ -56,7 +58,7 @@ const Films = () => {
       <div className="films__second">
         <div className="films__image-container">
           <img
-            src="https://cdn.sanity.io/images/66aqnbcn/production/99e036bbb3d6d35838eec66d2b50aaaf0810df30-1560x1040.jpg?w=2048&q=75&fit=clip&auto=format"
+            src={Film2}
             alt="Two films of a guy on a background"
             className="films__image"
             onLoad={onLoad}
