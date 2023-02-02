@@ -18,7 +18,7 @@ const Loading = () => {
         stagger: 0.2,
         ease: Power4.easeOut,
         repeat: 1,
-        repeatDelay: 1,
+        repeatDelay: 0.5,
       })
       .to(".loading", {
         yPercent: -100,
