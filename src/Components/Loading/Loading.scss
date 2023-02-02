@@ -1,0 +1,29 @@
+@use "../../Styles/mixins" as *;
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  background-color: black;
+  padding-bottom: 10vh;
+  @include flex-layout(column, center, center);
+
+  &__image {
+    width: 40vw;
+  }
+
+  &__periods {
+    @include flex-layout(row, center, center);
+    font-size: 40vw;
+    position: absolute;
+    top: 65%;
+  }
+
+  &__period {
+    color: white;
+    font-size: 5vw;
+  }
+}

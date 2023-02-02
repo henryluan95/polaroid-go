@@ -21,8 +21,8 @@ const About = () => {
         scrollTrigger: {
           trigger: ".about",
           start: "20% 80%",
-          end: "40% 20%%",
-          scrub: true,
+          end: "40% 40%%",
+          scrub: 4,
         },
       })
       .from(firstTextEl.firstChild, {

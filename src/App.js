@@ -5,6 +5,7 @@ import Video from "./Components/Video/Video";
 import Films from "./Components/Films/Films";
 import About from "./Components/About/About";
 import Purchase from "./Components/Purchase/Purchase";
+import Loading from "./Components/Loading/Loading";
 
 export default function App() {
   window.onbeforeunload = function () {
@@ -13,6 +14,7 @@ export default function App() {
 
   return (
     <>
+      <Loading />
       <Landing />
       <Info />
       <Video />
