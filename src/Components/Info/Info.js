@@ -22,14 +22,15 @@ const Info = () => {
   return (
     <section className="info">
       <div className="info__left">
-        <p className="info__text">
-          <span>STAY</span> <span>INSTANT</span>
-        </p>
-        <img
-          className="info__circle"
-          src={CircleText}
-          alt="Wearable, Portable, Create Anywhere"
-        />
+        <div className="info__text">
+          <img
+            className="info__circle"
+            src={CircleText}
+            alt="Wearable, Portable, Create Anywhere"
+          />
+          <span className="info__word--first">STAY</span>
+          <span className="info__word--second">INSTANT</span>
+        </div>
       </div>
       <div className="info__right">
         <h3 className="info__description info__description--heading">

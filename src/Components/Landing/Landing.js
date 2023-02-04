@@ -12,13 +12,11 @@ const Landing = () => {
   useLayoutEffect(() => {
     let mm = gsap.matchMedia();
 
-    mm.add("(min-width: 768px)", () => {
+    mm.add("(min-width: 1280px)", () => {
       gsap.set(".spline", {
         scale: 0.5,
       });
-    });
 
-    mm.add("(min-width: 1280px)", () => {
       gsap.to(".spline", {
         xPercent: -35,
         scrollTrigger: {
