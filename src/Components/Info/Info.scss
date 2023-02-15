@@ -25,11 +25,23 @@
   &__text {
     @include flex-layout(column, center, center);
     position: absolute;
-    top: 50%;
-    right: 100%;
+    top: 60%;
+    right: 75%;
     transform: translate(80%, -80%);
     font-size: 5rem;
     color: white;
+  }
+
+  &__word--first {
+    position: absolute;
+    top: 30%;
+    left: -25%;
+  }
+
+  &__word--second {
+    position: absolute;
+    top: 53%;
+    left: -5%;
   }
 
   &__circle {
