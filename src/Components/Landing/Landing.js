@@ -56,7 +56,7 @@ const Landing = () => {
       {isDesktop && (
         <Spline
           className="spline"
-          scene="https://prod.spline.design/ruO4eHIG9FJ3UzMG/scene.splinecode"
+          scene="https://prod.spline.design/bYuFL5rcCSdqIk9H/scene.splinecode"
         />
       )}
     </div>
