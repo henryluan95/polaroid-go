@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-// import Spline from "@splinetool/react-spline";
+import Spline from "@splinetool/react-spline";
 import "./Landing.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -53,12 +53,12 @@ const Landing = () => {
         <h1 className="landing__title">Polaroid Go</h1>
         <h2 className="landing__text">Instant Cameras</h2>
       </div>
-      {/* {isDesktop && (
+      {isDesktop && (
         <Spline
           className="spline"
           scene="https://prod.spline.design/ruO4eHIG9FJ3UzMG/scene.splinecode"
         />
-      )} */}
+      )}
     </div>
   );
 };
